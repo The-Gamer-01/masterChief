@@ -22,8 +22,10 @@
     <properties>
         <reversion>0.0.1-SNAPSHOT</reversion>
         <log4j.version>1.2.17</log4j.version>
-        <spring-boot.version>2.7.1</spring-boot.version>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
         <spring-boot-test.version>2.7.1</spring-boot-test.version>
+        <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
         <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     </properties>
     
@@ -64,14 +66,26 @@
             <!--spring-boot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
+                <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
-            <!--spring-boot-test-->
+            <!--spring cloud alibaba-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${spring-boot-test.version}</version>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
