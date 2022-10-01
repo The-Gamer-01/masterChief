@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <inceptionYear>2022</inceptionYear>
+    <groupId>com.hyx</groupId>
+    <artifactId>masterChief</artifactId>
+    <version>${reversion}</version>
+    <packaging>pom</packaging>
+    
+    <name>masterChief ${project.version}</name>
+    <description>The masterChief parent file</description>
+    
+    <properties>
+        <reversion>0.0.1-SNAPSHOT</reversion>
+        <log4j.version>1.2.17</log4j.version>
+        <spring-boot.version>2.7.1</spring-boot.version>
+        <spring-boot-test.version>2.7.1</spring-boot-test.version>
+        <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+    </properties>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle-plugin.version}</version>
+                <configuration>
+                    <configLocation>style/CheckStyle.xml</configLocation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <encoding>UTF-8</encoding>
+                    <consoleOutput>true</consoleOutput>
+                    <failsOnError>true</failsOnError>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>validate</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <dependencyManagement>
+        <dependencies>
+            <!--log4j-->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <!--spring-boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!--spring-boot-test-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-test.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
