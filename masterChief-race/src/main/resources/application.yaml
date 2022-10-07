@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  datasource:
+    url: jdbc:mysql://localhost:3306/masterchief?useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: huangyixuan
+
+mybatis:
+  mapper-locations:
+    - classpath:mybatis/mapper/*.xml

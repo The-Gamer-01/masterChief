@@ -13,7 +13,7 @@
     </modules>
     <groupId>com.hyx</groupId>
     <artifactId>masterChief</artifactId>
-    <version>${reversion}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>masterChief ${project.version}</name>
@@ -28,6 +28,19 @@
         <spring-cloud-alibaba.version>2.2.6.RELEASE</spring-cloud-alibaba.version>
         <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     </properties>
+    
+    <dependencies>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--spring-beans-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+    </dependencies>
     
     <build>
         <plugins>
@@ -89,4 +102,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    
 </project>
