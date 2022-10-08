@@ -9,14 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     
-    <artifactId>masterChief-users</artifactId>
+    <artifactId>masterChief-actuator</artifactId>
 
-    <dependencies>
-        <dependency>
-            <!--web-->
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

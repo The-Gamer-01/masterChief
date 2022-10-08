@@ -30,4 +30,11 @@ public interface RaceService {
      * @return 是否创建成功.
      */
     boolean createRace(Race race);
+    
+    /**
+     * 更新race.
+     * @param race 更新后的race对象.
+     * @return 是否更新成功.
+     */
+    boolean modifyRace(Race race);
 }

@@ -37,4 +37,10 @@ public class RaceServiceImpl implements RaceService {
         race.setIsDelete((short) 0);
         return raceMapper.createRace(race);
     }
+    
+    @Override
+    public boolean modifyRace(Race race) {
+        return false;
+    }
+    
 }

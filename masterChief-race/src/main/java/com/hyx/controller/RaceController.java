@@ -40,7 +40,9 @@ public class RaceController {
     
     @PutMapping("/race")
     private boolean modifyRace(ModifyRaceVO modifyRaceVO) {
-        return false;
+        Race race = new Race();
+        BeanUtils.copyProperties(modifyRaceVO, race);
+        return raceService.modifyRace(race);
     }
     
     @DeleteMapping("/race/{id}")

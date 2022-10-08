@@ -10,6 +10,7 @@
         <module>masterChief-users</module>
         <module>masterChief-common</module>
         <module>masterChief-manager</module>
+        <module>masterChief-actuator</module>
     </modules>
     <groupId>com.hyx</groupId>
     <artifactId>masterChief</artifactId>
